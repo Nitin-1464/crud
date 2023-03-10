@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body >
+        
+        <form action="">
+        
+           <label for="name"> Nane:</label>
+            <input type="Name" name="Name" id="name" placeholder="Name">
+            <br><br>
+           
+            <label for="name"> Email:</label>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <br><br>
+            
+            <label for="name"> Phone number:</label>
+            <input type="number" name="number" id="phone" placeholder="Phone nummber" required>
+            <br><br>
+          
+            <label for="name"> Birthdate:</label>
+            <input type="date" name="birthdate" id="birthdate" placeholder="Birthdate" required>
+            <br><br>
+        
+            <label for="name"> Appointment time:</label>
+            <input type="appointment" name="appointment" id="appointment" placeholder="Appointment" required>
+            <br><br>
+
+            <label for="name"> Favorite color:</label>
+            <select id="color" name="color" placeholder="Favorite color" required>
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+                <option value="black">Black</option>
+                <option value="greel">greel</option>
+              </select>
+              <br><br>
+
+            <label for="name"> Payment method:</label>
+            <input type="payment" name="payment" id="payment" placeholder="Payment method" required>
+            <br><br>
+
+            <label for="name"> Age:</label>
+            <input type="age" name="age" id="age" placeholder="Age" required>
+            <br><br>
+
+            <label for="name"> Checkbox options:</label>
+            <input type="checkbox" name="checkbox" id="checkbox" >hi
+            <input type="checkbox" name="checkbox" id="checkbox">hi
+            <br><br>
+            <label for="name"> Upload Photo:</label>
+            <input type="file" name="img" id="upload" accept="image/*" placeholder="Upload Photo" required>
+            <br><br>
+            <button onclick="saveDate()">Submit</button>
+        </form>
+        
+        
+        <script>
+            function saveDate()
+            {
+               let name,email,number,birthdate,appointment,color,payment,age,checkbox,upload;
+                name = document.getElementById("name").value;
+                email = document.getElementById("email").value;
+                number = document.getElementById("phone").value;
+                birthdate = document.getElementById("birthdate").value;
+                appointment = document.getElementById("appointment").value;
+                color = document.getElementById("color").value;
+                payment = document.getElementById("payment").value;
+                age = document.getElementById("age").value;
+                checkbox = document.getElementById("checkbox").value;
+                upload = document.getElementById("upload").value;
+                localStorage.setItem("name",name);
+                localStorage.setItem("email",email);
+                localStorage.setItem("number",number);
+                localStorage.setItem("birthdate",birthdate);
+                localStorage.setItem("appointment",appointment);
+                localStorage.setItem("color",color);
+                localStorage.setItem("payment",payment);
+                localStorage.setItem("age",age);
+                localStorage.setItem("checkbox ",checkbox );
+                localStorage.setItem("upload",upload);
+            }
+        </script>
+    </body>
+</html>
